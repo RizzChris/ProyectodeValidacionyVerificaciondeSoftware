@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/animations.css">  
-    <link rel="stylesheet" href="css/main.css">  
-    <link rel="stylesheet" href="css/login.css">
-        
-    <title>Login</title>
+<?php
+//learn from w3schools.com
+//Unset all the server side variables
 
-    
-    
-</head>
-<body>
-    <?php
-
-    //learn from w3schools.com
-    //Unset all the server side variables
-
-    session_start();
+session_start();
 
     $_SESSION["user"]="";
     $_SESSION["usertype"]="";
@@ -61,7 +44,7 @@
                     header('location: patient/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Credenciales incorrectas: Email o contraseña inválidos</label>';
                 }
 
             }elseif($utype=='a'){
@@ -77,7 +60,7 @@
                     header('location: admin/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Credenciales incorrectas: Email o contraseña inválidos</label>';
                 }
 
 
@@ -93,13 +76,13 @@
                     header('location: doctor/index.php');
 
                 }else{
-                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
+                    $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Credenciales incorrectas: Email o contraseña inválidos</label>';
                 }
 
             }
             
         }else{
-            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">We cant found any acount for this email.</label>';
+            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">No pudimos encontrar ninguna cuenta para este email.</label>';
         }
 
 
@@ -113,45 +96,56 @@
     }
 
     ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animations.css">  
+    <link rel="stylesheet" href="css/main.css">  
+    <link rel="stylesheet" href="css/login.css">
+        
+    <title>Iniciar Sesión</title>
 
-
-
-
-
+    
+    
+</head>
+<body>
     <center>
     <div class="container">
         <table border="0" style="margin: 0;padding: 0;width: 60%;">
             <tr>
                 <td>
-                    <p class="header-text">Welcome Back!</p>
+                    <p class="header-text">¡Bienvenido de Nuevo!</p>
                 </td>
             </tr>
         <div class="form-body">
             <tr>
                 <td>
-                    <p class="sub-text">Login with your details to continue</p>
+                    <p class="sub-text">Inicia sesión con tus detalles para continuar</p>
                 </td>
             </tr>
             <tr>
                 <form action="" method="POST" >
                 <td class="label-td">
-                    <label for="useremail" class="form-label">Email: </label>
+                    <label for="useremail" class="form-label">Correo Electrónico: </label>
                 </td>
             </tr>
             <tr>
                 <td class="label-td">
-                    <input type="email" name="useremail" class="input-text" placeholder="Email Address" required>
+                    <input type="email" name="useremail" class="input-text" placeholder="Dirección de Correo Electrónico" required>
                 </td>
             </tr>
             <tr>
                 <td class="label-td">
-                    <label for="userpassword" class="form-label">Password: </label>
+                    <label for="userpassword" class="form-label">Contraseña: </label>
                 </td>
             </tr>
 
             <tr>
                 <td class="label-td">
-                    <input type="Password" name="userpassword" class="input-text" placeholder="Password" required>
+                    <input type="Password" name="userpassword" class="input-text" placeholder="Contraseña" required>
                 </td>
             </tr>
 
@@ -164,15 +158,15 @@
 
             <tr>
                 <td>
-                    <input type="submit" value="Login" class="login-btn btn-primary btn">
+                    <input type="submit" value="Iniciar Sesión" class="login-btn btn-primary btn">
                 </td>
             </tr>
         </div>
             <tr>
                 <td>
                     <br>
-                    <label for="" class="sub-text" style="font-weight: 280;">Don't have an account&#63; </label>
-                    <a href="signup.php" class="hover-link1 non-style-link">Sign Up</a>
+                    <label for="" class="sub-text" style="font-weight: 280;">¿No tienes una cuenta? </label>
+                    <a href="signup.php" class="hover-link1 non-style-link">Regístrate</a>
                     <br><br><br>
                 </td>
             </tr>

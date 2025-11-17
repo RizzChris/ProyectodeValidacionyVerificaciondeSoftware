@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/animations.css">  
-    <link rel="stylesheet" href="css/main.css">  
-    <link rel="stylesheet" href="css/signup.css">
-        
-    <title>Create Account</title>
-    <style>
-        .container{
-            animation: transitionIn-X 0.5s;
-        }
-    </style>
-</head>
-<body>
 <?php
 
 //learn from w3schools.com
@@ -62,7 +44,7 @@ if($_POST){
         $stmt->execute();
         $result = $stmt->get_result();
         if($result->num_rows==1){
-            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>';
+            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Ya existe una cuenta para esta dirección de correo electrónico.</label>';
         }else{
             //TODO
             $database->query("insert into patient(pemail,pname,ppassword, paddress, pnic,pdob,ptel) values('$email','$name','$newpassword','$address','$nic','$dob','$tele');");
@@ -78,7 +60,7 @@ if($_POST){
         }
         
     }else{
-        $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>';
+        $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Error de Confirmación de Contraseña! Reconfirma la Contraseña</label>';
     }
 
 
@@ -90,32 +72,48 @@ if($_POST){
 }
 
 ?>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animations.css">  
+    <link rel="stylesheet" href="css/main.css">  
+    <link rel="stylesheet" href="css/signup.css">
+        
+    <title>Crear Cuenta</title>
+    <style>
+        .container{
+            animation: transitionIn-X 0.5s;
+        }
+    </style>
+</head>
+<body>
     <center>
     <div class="container">
         <table border="0" style="width: 69%;">
             <tr>
                 <td colspan="2">
-                    <p class="header-text">Let's Get Started</p>
-                    <p class="sub-text">It's Okey, Now Create User Account.</p>
+                    <p class="header-text">Comencemos</p>
+                    <p class="sub-text">Está Bien, Ahora Crea tu Cuenta de Usuario.</p>
                 </td>
             </tr>
             <tr>
                 <form action="" method="POST" >
                 <td class="label-td" colspan="2">
-                    <label for="newemail" class="form-label">Email: </label>
+                    <label for="newemail" class="form-label">Correo Electrónico: </label>
                 </td>
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <input type="email" name="newemail" class="input-text" placeholder="Email Address" required>
+                    <input type="email" name="newemail" class="input-text" placeholder="Dirección de Correo Electrónico" required>
                 </td>
                 
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="tele" class="form-label">Mobile Number: </label>
+                    <label for="tele" class="form-label">Número de Celular: </label>
                 </td>
             </tr>
             <tr>
@@ -125,22 +123,22 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="newpassword" class="form-label">Create New Password: </label>
+                    <label for="newpassword" class="form-label">Crear Nueva Contraseña: </label>
                 </td>
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <input type="password" name="newpassword" class="input-text" placeholder="New Password" required>
+                    <input type="password" name="newpassword" class="input-text" placeholder="Nueva Contraseña" required>
                 </td>
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="cpassword" class="form-label">Conform Password: </label>
+                    <label for="cpassword" class="form-label">Confirmar Contraseña: </label>
                 </td>
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <input type="password" name="cpassword" class="input-text" placeholder="Conform Password" required>
+                    <input type="password" name="cpassword" class="input-text" placeholder="Confirmar Contraseña" required>
                 </td>
             </tr>
      
@@ -154,18 +152,18 @@ if($_POST){
             
             <tr>
                 <td>
-                    <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >
+                    <input type="reset" value="Restablecer" class="login-btn btn-primary-soft btn" >
                 </td>
                 <td>
-                    <input type="submit" value="Sign Up" class="login-btn btn-primary btn">
+                    <input type="submit" value="Registrarse" class="login-btn btn-primary btn">
                 </td>
 
             </tr>
             <tr>
                 <td colspan="2">
                     <br>
-                    <label for="" class="sub-text" style="font-weight: 280;">Already have an account&#63; </label>
-                    <a href="login.php" class="hover-link1 non-style-link">Login</a>
+                    <label for="" class="sub-text" style="font-weight: 280;">¿Ya tienes una cuenta? </label>
+                    <a href="login.php" class="hover-link1 non-style-link">Iniciar Sesión</a>
                     <br><br><br>
                 </td>
             </tr>

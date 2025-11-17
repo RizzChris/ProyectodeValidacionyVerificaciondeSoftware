@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/animations.css">  
-    <link rel="stylesheet" href="../css/main.css">  
-    <link rel="stylesheet" href="../css/admin.css">
-        
-    <title>Sessions</title>
-    <style>
-        .popup{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-        .sub-table{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-</style>
-</head>
-<body>
-    <?php
+<?php
 
     //learn from w3schools.com
 
@@ -61,7 +40,30 @@
 
 
  //echo $userid;
- ?>
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/animations.css">  
+    <link rel="stylesheet" href="../css/main.css">  
+    <link rel="stylesheet" href="../css/admin.css">
+        
+    <title>Sessions</title>
+    <style>
+        .popup{
+            animation: transitionIn-Y-bottom 0.5s;
+        }
+        .sub-table{
+            animation: transitionIn-Y-bottom 0.5s;
+        }
+</style>
+</head>
+<body>
+    
  <div class="container">
      <div class="menu">
      <table class="menu-container" border="0">
@@ -79,7 +81,7 @@
                          </tr>
                          <tr>
                              <td colspan="2">
-                                 <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                 <a href="../logout.php" ><input type="button" value="Cerrar Sesión" class="logout-btn btn-primary-soft btn"></a>
                              </td>
                          </tr>
                  </table>
@@ -87,28 +89,28 @@
              </tr>
              <tr class="menu-row" >
                     <td class="menu-btn menu-icon-home " >
-                        <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Home</p></a></div></a>
+                        <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Inicio</p></a></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-doctor">
-                        <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">All Doctors</p></a></div>
+                        <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">Todos los Doctores</p></a></div>
                     </td>
                 </tr>
                 
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-session menu-active menu-icon-session-active">
-                        <a href="schedule.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Scheduled Sessions</p></div></a>
+                        <a href="schedule.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Sesiones Programadas</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-appoinment">
-                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Bookings</p></a></div>
+                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Mis Reservas</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
-                        <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
+                        <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Configuración</p></a></div>
                     </td>
                 </tr>
                 
@@ -119,12 +121,12 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                    <a href="schedule.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    <a href="schedule.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Volver</font></button></a>
                     </td>
                     <td >
                             <form action="schedule.php" method="post" class="header-search">
 
-                                        <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email or Date (YYYY-MM-DD)" list="doctors" >&nbsp;&nbsp;
+                                        <input type="search" name="search" class="input-text header-searchbar" placeholder="Buscar nombre o correo del Doctor o Fecha (AAAA-MM-DD)" list="doctors" >&nbsp;&nbsp;
                                         
                                         <?php
                                             echo '<datalist id="doctors">';
@@ -155,12 +157,12 @@
             ?>
                                         
                                 
-                                        <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+                                        <input type="Submit" value="Buscar" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
                                         </form>
                     </td>
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Today's Date
+                            Fecha de Hoy
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
@@ -244,20 +246,20 @@
                                             
                                                 <div style="width:100%">
                                                         <div class="h1-search" style="font-size:25px;">
-                                                            Session Details
+                                                            Detalles de la Sesión
                                                         </div><br><br>
                                                         <div class="h3-search" style="font-size:18px;line-height:30px">
-                                                            Doctor name:  &nbsp;&nbsp;<b>'.$docname.'</b><br>
-                                                            Doctor Email:  &nbsp;&nbsp;<b>'.$docemail.'</b> 
+                                                            Nombre del Doctor:  &nbsp;&nbsp;<b>'.$docname.'</b><br>
+                                                            Correo del Doctor:  &nbsp;&nbsp;<b>'.$docemail.'</b>
                                                         </div>
                                                         <div class="h3-search" style="font-size:18px;">
-                                                          
+
                                                         </div><br>
                                                         <div class="h3-search" style="font-size:18px;">
-                                                            Session Title: '.$title.'<br>
-                                                            Session Scheduled Date: '.$scheduledate.'<br>
-                                                            Session Starts : '.$scheduletime.'<br>
-                                                            Channeling fee : <b>LKR.2 000.00</b>
+                                                            Título de Sesión: '.$title.'<br>
+                                                            Fecha Programada de Sesión: '.$scheduledate.'<br>
+                                                            Hora de Inicio: '.$scheduletime.'<br>
+                                                            Tarifa de Consulta: <b>LKR.2 000.00</b>
 
                                                         </div>
                                                         <br>
@@ -274,7 +276,7 @@
                                             
                                                 <div style="width:100%;padding-top: 15px;padding-bottom: 15px;">
                                                         <div class="h1-search" style="font-size:20px;line-height: 35px;margin-left:8px;text-align:center;">
-                                                            Your Appointment Number
+                                                            Tu Número de Cita
                                                         </div>
                                                         <center>
                                                         <div class=" dashboard-icons" style="margin-left: 0px;width:90%;font-size:70px;font-weight:800;text-align:center;color:var(--btnnictext);background-color: var(--btnice)">'.$apponum.'</div>
@@ -291,7 +293,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="Submit" class="login-btn btn-primary btn btn-book" style="margin-left:10px;padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;width:95%;text-align: center;" value="Book now" name="booknow"></button>
+                                                <input type="Submit" class="login-btn btn-primary btn btn-book" style="margin-left:10px;padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;width:95%;text-align: center;" value="Reservar ahora" name="booknow"></button>
                                             </form>
                                             </td>
                                         </tr>
