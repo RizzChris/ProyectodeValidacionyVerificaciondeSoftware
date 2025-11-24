@@ -1,6 +1,5 @@
 <?php
 
-    //learn from w3schools.com
 
     session_start();
 
@@ -110,7 +109,7 @@
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('America/Monterrey');
 
                         $today = date('Y-m-d');
                         echo $today;
@@ -200,9 +199,14 @@
                     if($_POST){
                         //print_r($_POST);
                         $sqlpt1="";
-                        if(!empty($_POST["sheduledate"])){
-                            $sheduledate=$_POST["sheduledate"];
-                            $sqlpt1=" schedule.scheduledate='$sheduledate' ";
+                        if (!empty($_POST["sheduledate"])) {
+                            $sheduledate = $_POST["sheduledate"];
+                            $today = date('Y-m-d');
+                            if ($sheduledate < $today) {
+                                echo "<script>alert('La fecha programada no puede ser anterior a hoy.');</script>";
+                            } else {
+                                $sqlpt1 = " schedule.scheduledate='$sheduledate' ";
+                            }
                         }
 
 

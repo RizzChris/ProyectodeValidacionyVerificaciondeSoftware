@@ -1,6 +1,5 @@
 <?php
 
-    //learn from w3schools.com
 
     session_start();
 
@@ -132,7 +131,7 @@
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('America/Monterrey');
 
                         $date = date('Y-m-d');
                         echo $date;

@@ -1,6 +1,5 @@
 <?php
 
-    //learn from w3schools.com
 
     session_start();
 
@@ -34,7 +33,7 @@
     
 
 
-    date_default_timezone_set('Asia/Kolkata');
+    date_default_timezone_set('America/Monterrey');
 
     $today = date('Y-m-d');
 

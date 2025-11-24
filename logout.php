@@ -10,7 +10,7 @@
 
 	session_destroy();
 
-	// redirecting the user to the login page
+	// redirige a la página de inicio de sesión
 	header('Location: login.php?action=logout');
 
  ?>

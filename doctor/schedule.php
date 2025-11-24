@@ -1,6 +1,5 @@
 <?php
 
-    //learn from w3schools.com
 
     session_start();
 
@@ -180,9 +179,14 @@
                     if($_POST){
                         //print_r($_POST);
                         $sqlpt1="";
-                        if(!empty($_POST["sheduledate"])){
-                            $sheduledate=$_POST["sheduledate"];
-                            $sqlmain.=" and schedule.scheduledate='$sheduledate' ";
+                        if (!empty($_POST["sheduledate"])) {
+                            $sheduledate = $_POST["sheduledate"];
+                            $today = date('Y-m-d');
+                            if ($sheduledate < $today) {
+                                echo "<script>alert('La fecha programada no puede ser anterior a hoy.');</script>";
+                            } else {
+                                $sqlmain .= " and schedule.scheduledate='$sheduledate' ";
+                            }
                         }
 
                     }
